@@ -8,6 +8,7 @@ import 'package:codeedex/features/products_details/view/products_details_view.da
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeEcommerceScreen extends StatefulWidget {
   const HomeEcommerceScreen({super.key});
@@ -82,6 +83,15 @@ class _HomeEcommerceScreenState extends State<HomeEcommerceScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SmoothPageIndicator(
+                controller: PageController(),
+                count: 3,
+                effect: WormEffect(dotWidth: 10, dotHeight: 10),
+                onDotClicked: (index) {},
               ),
             ),
             Padding(
